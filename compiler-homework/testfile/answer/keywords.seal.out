@@ -1,0 +1,10 @@
+#name "keywords.seal"
+#1 func
+#2 var
+#3 if
+#4 else
+#5 while
+#6 for
+#7 return
+#8 continue
+#9 break

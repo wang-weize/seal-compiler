@@ -1,0 +1,8 @@
+"sample string"
+
+"multi line \
+string"
+
+"string with \n \t \\"
+
+"illegel sring\\\n"

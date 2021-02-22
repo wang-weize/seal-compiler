@@ -1,0 +1,12 @@
+#name "symbols.seal"
+#1 TYPEID Int
+#1 TYPEID Float
+#1 TYPEID String
+#1 TYPEID Bool
+#1 TYPEID Void
+#3 OBJECTID a
+#3 OBJECTID b
+#3 OBJECTID a__
+#4 OBJECTID a33
+#5 OBJECTID kam__32
+#6 OBJECTID int__32

@@ -1,0 +1,5 @@
+#name "comment-error.seal"
+#1 ERROR "String contains null character '\\0'"
+#3 CONST_STRING "\""
+#6 ERROR "newline in quotation must use a '\\'"
+#6 ERROR "EOF in string constant"

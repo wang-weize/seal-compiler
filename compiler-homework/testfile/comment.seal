@@ -1,0 +1,18 @@
+/*
+this is a simple test for comment.
+这是个注释
+注释里什么都ok  无所谓
+*& 123 0x56
+0x44
+Int
+String
+这都是注释
+*/
+
+var
+
+// this an line comment!
+
+var
+
+// there will be a error below

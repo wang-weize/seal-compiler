@@ -1,0 +1,5 @@
+#name "strings-quote1.seal"
+#1 CONST_STRING "sample string"
+#4 CONST_STRING "multi line \nstring"
+#6 CONST_STRING "string with \n \t \\"
+#8 CONST_STRING "illegel sring\\\n"

@@ -1,0 +1,5549 @@
+-----result------
+--------Test ../515111910075穆振宇_37108_1833382_515111910075 --------
+using comment-error.seal --------
+4c4,5
+< #5 ERROR "new line error"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 ERROR "!"
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+19,24c10,12
+< #13 CONST_INT 0
+< #13 OBJECTID xAE
+< #14 CONST_INT 0
+< #14 OBJECTID xABCDEF
+< #15 CONST_INT 0
+< #15 OBJECTID xA01
+---
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+passed
+using keywords.seal --------
+7c7
+< #6 OBJECTID for
+---
+> #6 for
+9,10c9,10
+< #8 OBJECTID continue
+< #9 OBJECTID break
+---
+> #8 continue
+> #9 break
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+16,20c12,14
+< #3 ERROR "&"
+< #3 ERROR "&"
+< #3 '|'
+< #3 '|'
+< #3 ERROR "^"
+---
+> #3 &&
+> #3 ||
+> #3 '^'
+22c16
+< #4 ERROR "&"
+---
+> #4 '&'
+24,25c18,19
+< #4 ERROR "~"
+< #4 ERROR "!"
+---
+> #4 '~'
+> #4 '!'
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 OBJECTID for
+< #1 OBJECTID quoted
+9,10c4,5
+< #8 CONST_STRING "string with \\n \\t \\"
+< #10 CONST_STRING "illegel sring\\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "\\W\\W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+3c3
+< #7 ERROR "EOF!!!!"
+---
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2c2
+< #5 OBJECTID __aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+10,14c6
+< #2 OBJECTID Void
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+passed
+using type-error.seal --------
+2c2
+< #8 OBJECTID Struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../517015910012郦洋_38047_1840416_517015910012_郦洋-1 --------
+using comment-error.seal --------
+2a3,5
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2c2
+< #1 CONST_INT 890
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+12,13c12
+< #3 '&'
+< #3 '&'
+---
+> #3 &&
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+6,7c6
+< #2 ERROR "V"
+< #2 OBJECTID oid
+---
+> #2 TYPEID Void
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../517020910191倪浩垠_34006_1810011_517020910191_倪浩垠 --------
+using comment-error.seal --------
+2,5c2,5
+< #1 ERROR "\"\\0"
+< #3 CONST_STRING "\\"
+< #5 CONST_STRING "\n\n"
+< #5 OBJECTID aaa
+---
+> #1 ERROR "String contains null character '\\0'"
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 ERROR "!"
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2c2
+< #1 CONST_INT 0
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+5c5
+< #4 OBJECTID else
+---
+> #4 else
+7c7
+< #6 OBJECTID for
+---
+> #6 for
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+16,20c12,14
+< #3 ERROR "&"
+< #3 ERROR "&"
+< #3 '|'
+< #3 '|'
+< #3 ERROR "^"
+---
+> #3 &&
+> #3 ||
+> #3 '^'
+22c16
+< #4 ERROR "&"
+---
+> #4 '&'
+24,25c18,19
+< #4 ERROR "~"
+< #4 ERROR "!"
+---
+> #4 '~'
+> #4 '!'
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 OBJECTID for
+< #1 OBJECTID quoted
+9,10c4,5
+< #8 CONST_STRING "string with t \\"
+< #10 CONST_STRING "illegel sring\\"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,3c2
+< #5 OBJECTID _
+< #5 OBJECTID _aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+10,15c6
+< #2 ERROR "V"
+< #2 OBJECTID oid
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+18,20c9
+< #5 OBJECTID a
+< #5 OBJECTID _
+< #5 OBJECTID _
+---
+> #5 OBJECTID a__
+22,27c11,12
+< #7 OBJECTID kam
+< #7 OBJECTID _
+< #7 OBJECTID _32
+< #8 OBJECTID int
+< #8 OBJECTID _
+< #8 OBJECTID _32
+---
+> #7 OBJECTID kam__32
+> #8 OBJECTID int__32
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../517021910067李世杰_42462_1840624_517021910067_李世杰-2 --------
+using comment-error.seal --------
+3,6c3,5
+< #3 CONST_STRING ""
+< #5 CONST_STRING "\n\n"
+< #5 OBJECTID aaa
+< #6 ERROR "String not closed "
+---
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2c2
+< #1 OBJECTID 0xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+19,21c10,12
+< #13 OBJECTID 0xAE
+< #14 OBJECTID 0xABCDEF
+< #15 OBJECTID 0xA01
+---
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3,5
+< .[]
+\ No newline at end of file
+---
+> #2 ERROR "."
+> #3 ERROR "["
+> #4 ERROR "]"
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+9,10c4,5
+< #8 CONST_STRING "string with n t \\"
+< #10 CONST_STRING "illegel sring\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2c2
+< __#5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,7c2,3
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+< #2 OBJECTID Int
+< #2 OBJECTID Float
+---
+> #2 TYPEID Int
+> #2 TYPEID Float
+10,14c6
+< #2 ERROR "Cannot start with a capital letter"
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+17,22c9,12
+< #5 OBJECTID a
+< __#6 OBJECTID a33
+< #7 OBJECTID kam
+< __#7 CONST_INT 32
+< #8 OBJECTID int
+< __#8 CONST_INT 32
+---
+> #5 OBJECTID a__
+> #6 OBJECTID a33
+> #7 OBJECTID kam__32
+> #8 OBJECTID int__32
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "Cannot start with a capital letter"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../517070910139庄越_36302_1834237_517070910139_庄越 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "invalid change line"
+< #6 ERROR "EOF"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2c2
+< #1 OBJECTID 0xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+5,19c5,17
+< #7 CONST_INT 0xab
+< #8 CONST_INT 0xcd
+< #9 CONST_INT 0xef
+< #10 CONST_INT 0x55
+< #11 CONST_INT 0x50f
+< #13 TYPEID 0xAE
+< #14 CONST_INT 0
+< #14 OBJECTID xABCDEF
+< #15 TYPEID 0xA01
+< #16 CONST_INT 0
+< #16 OBJECTID x12
+< #17 CONST_INT 0x34
+< #18 CONST_INT 0x56
+< #19 CONST_INT 0x78
+< #20 CONST_INT 0x90
+---
+> #7 CONST_INT 171
+> #8 CONST_INT 205
+> #9 CONST_INT 239
+> #10 CONST_INT 85
+> #11 CONST_INT 1295
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2,4c2,3
+< #6 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\`\n\n"
+< #7 TYPEID EOF
+< #8 ERROR "EOF"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+9,11c9
+< #5 OBJECTID a
+< #5 ERROR "_"
+< #5 ERROR "_"
+---
+> #5 OBJECTID a__
+13,20c11,12
+< #7 OBJECTID kam
+< #7 ERROR "_"
+< #7 ERROR "_"
+< #7 CONST_INT 32
+< #8 OBJECTID int
+< #8 ERROR "_"
+< #8 ERROR "_"
+< #8 CONST_INT 32
+---
+> #7 OBJECTID kam__32
+> #8 OBJECTID int__32
+passed
+using type-error.seal --------
+2c2
+< #8 TYPEID Struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../517201910016刘虎_35117_1841642_517201910016_liuhu --------
+using comment-error.seal --------
+2,5c2,5
+< #1 CONST_STRING "\\0"
+< #4 CONST_STRING "\\"
+< #4 CONST_STRING "\n\n"
+< #4 OBJECTID aaa
+---
+> #1 ERROR "String contains null character '\\0'"
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+10,15c10,12
+< #13 CONST_INT 0
+< #13 OBJECTID xAE
+< #14 CONST_INT 0
+< #14 OBJECTID xABCDEF
+< #15 CONST_INT 0
+< #15 OBJECTID xA01
+---
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+4,5c4,5
+< #3 <Invalid Token>
+< #4 <Invalid Token>
+---
+> #3 ERROR "["
+> #4 ERROR "]"
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+3,5c3,5
+< #5 CONST_STRING "multi line \\\nstring"
+< #7 CONST_STRING "string with \\n \\t \\\\"
+< #9 CONST_STRING "illegel sring\\\\\\n"
+---
+> #6 CONST_STRING "multi line \nstring"
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #1 CONST_STRING "\\W\\W \\\n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+2,4c2,3
+< #1 CONST_STRING "this a simple string\nfor "
+< \#1 CONST_STRING "n\nmulti line\n@@ "
+< \#3 CONST_STRING "\nEOF\n"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2c2
+< #5 ERROR "__aac"
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518020910127管易恒_53477_1785858_518020910127 --------
+using comment-error.seal --------
+3,6c3,5
+< #3 CONST_STRING "\\"
+< #3 ERROR "A new string line without \\"
+< #3 OBJECTID aaa
+< #4 ERROR "Quotation mark loss"
+---
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+4,5c4,5
+< #8 CONST_STRING "string with \\n \\t \\"
+< #10 CONST_STRING "illegel sring\\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "\\W\\W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910012顾睿_53388_1823059_518021910012_顾睿 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+3c3
+< #15 var
+---
+> #16 var
+passed
+using floats.seal --------
+11c11
+< #11 CONST_FLOAT 4.0
+---
+> #12 CONST_FLOAT 4.0
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,21c2,17
+< #1 CONST_INT 123
+< #2 CONST_INT 332
+< #3 CONST_INT 0
+< #4 CONST_INT 171
+< #5 CONST_INT 205
+< #6 CONST_INT 239
+< #7 CONST_INT 85
+< #8 CONST_INT 5
+< #8 CONST_INT 0
+< #8 OBJECTID f
+< #10 CONST_INT 174
+< #11 CONST_INT 11259375
+< #12 CONST_INT 10
+< #12 CONST_INT 01
+< #13 CONST_INT 18
+< #14 CONST_INT 52
+< #15 CONST_INT 86
+< #16 CONST_INT 120
+< #17 CONST_INT 9
+< #17 CONST_INT 0
+---
+> #3 CONST_INT 123
+> #4 CONST_INT 332
+> #5 CONST_INT 0
+> #7 CONST_INT 171
+> #8 CONST_INT 205
+> #9 CONST_INT 239
+> #10 CONST_INT 85
+> #11 CONST_INT 1295
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+2,19c2,19
+< #1 '+'
+< #1 '-'
+< #1 '*'
+< #1 '/'
+< #1 '%'
+< #2 '<'
+< #2 '>'
+< #2 <=
+< #2 >=
+< #2 ==
+< #2 &&
+< #2 ||
+< #2 '^'
+< #3 '='
+< #3 '&'
+< #3 '|'
+< #3 '~'
+< #3 '!'
+---
+> #2 '+'
+> #2 '-'
+> #2 '*'
+> #2 '/'
+> #2 '%'
+> #3 '<'
+> #3 '>'
+> #3 <=
+> #3 >=
+> #3 ==
+> #3 &&
+> #3 ||
+> #3 '^'
+> #4 '='
+> #4 '&'
+> #4 '|'
+> #4 '~'
+> #4 '!'
+passed
+using othersymbols.seal --------
+2,7c2,7
+< #1 ';'
+< #1 ','
+< #1 '{'
+< #1 '}'
+< #1 '('
+< #1 ')'
+---
+> #2 ';'
+> #2 ','
+> #2 '{'
+> #2 '}'
+> #2 '('
+> #2 ')'
+passed
+using strings-quote1.seal --------
+2,5c2,5
+< #2 CONST_STRING "sample string"
+< #5 CONST_STRING "multi line \nstring"
+< #7 CONST_STRING "string with \n \t \\"
+< #9 CONST_STRING "illegel sring\\\n"
+---
+> #3 CONST_STRING "sample string"
+> #6 CONST_STRING "multi line \nstring"
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,12c2,12
+< #1 TYPEID Int
+< #1 TYPEID Float
+< #1 TYPEID String
+< #1 TYPEID Bool
+< #1 TYPEID Void
+< #3 OBJECTID a
+< #3 OBJECTID b
+< #3 OBJECTID a__
+< #4 OBJECTID a33
+< #5 OBJECTID kam__32
+< #6 OBJECTID int__32
+---
+> #2 TYPEID Int
+> #2 TYPEID Float
+> #2 TYPEID String
+> #2 TYPEID Bool
+> #2 TYPEID Void
+> #5 OBJECTID a
+> #5 OBJECTID b
+> #5 OBJECTID a__
+> #6 OBJECTID a33
+> #7 OBJECTID kam__32
+> #8 OBJECTID int__32
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910022王为泽_46381_1830090_518021910022_王为泽 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4,5c4,5
+< #5 ERROR "String with double quotation cannot start a new line directly"
+< #5 ERROR "String not closed"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910040丁远_56870_1840487_518021910040_丁远 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4
+< #6 ERROR "new line without '\\'"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 ERROR "!"
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+18c14
+< #3 ERROR "^"
+---
+> #3 '^'
+20c16
+< #4 ERROR "&"
+---
+> #4 '&'
+22,23c18,19
+< #4 ERROR "~"
+< #4 ERROR "!"
+---
+> #4 '~'
+> #4 '!'
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2,3c2
+< #8 illegal TYPEID'S'
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910071胡定伟_54110_1816839_518021910071_胡定伟-5 --------
+using comment-error.seal --------
+3,4c3,5
+< #3 ERROR "String contains null character '\\0'"
+< #6 ERROR "String contains null character '\\0'"
+---
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+17,18c8,9
+< #10 CONST_INT 901
+< #11 CONST_INT 14351
+---
+> #10 CONST_INT 85
+> #11 CONST_INT 1295
+21,26c12,17
+< #15 CONST_INT 3377
+< #16 CONST_INT 834
+< #17 CONST_INT 868
+< #18 CONST_INT 902
+< #19 CONST_INT 936
+< #20 CONST_INT 960
+---
+> #15 CONST_INT 2561
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+9,10c4,5
+< #8 CONST_STRING "string with \\n \\t \\"
+< #10 CONST_STRING "illegel sring\\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "\\W\\W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+2,6c2,3
+< #6 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\`\n\n"
+< #7 ERROR "E"
+< #7 ERROR "O"
+< #7 ERROR "F"
+< #8 ERROR "string_2 not closed, end of file encountered"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910082吴嘉锐_46969_1817931_518021910082_吴嘉锐 --------
+using comment-error.seal --------
+4c4,5
+< #6 CONST_STRING "aaa\n"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+9,16c4,5
+< #10 CONST_STRING "string with \n \t \\\"\n\n"
+< #10 OBJECTID illegel
+< #10 OBJECTID sring
+< #10 ERROR "\\"
+< #10 ERROR "\\"
+< #10 ERROR "\\"
+< #10 OBJECTID n
+< #10 ERROR "\""
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2c2
+< #5 OBJECTID __aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910097郭郁俊_57029_1831152_518021910097_郭郁俊 --------
+using comment-error.seal --------
+4c4
+< #6 ERROR "newline in quatation must use a '\\'"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910109王梓帆_45407_1839592_518021910109_王梓帆 --------
+using comment-error.seal --------
+3,6c3,5
+< #3 ERROR "newline in quotation must use a '\\'"
+< #3 ERROR "newline in quotation must use a '\\'"
+< #3 OBJECTID aaa
+< #4 CONST_STRING ""
+---
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+2,18c2,3
+< #12 OBJECTID var
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+< #16 OBJECTID var
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+---
+> #12 var
+> #16 var
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID ga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+19,24c10,12
+< #13 CONST_INT 0
+< #13 ERROR "AE"
+< #14 CONST_INT 0
+< #14 ERROR "ABCDEF"
+< #15 CONST_INT 0
+< #15 ERROR "A01"
+---
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+passed
+using keywords.seal --------
+7,10c7,10
+< #6 OBJECTID for
+< #7 OBJECTID return
+< #8 OBJECTID continue
+< #9 OBJECTID break
+---
+> #6 for
+> #7 return
+> #8 continue
+> #9 break
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+16,19c12,13
+< #3 '&'
+< #3 '&'
+< #3 '|'
+< #3 '|'
+---
+> #3 &&
+> #3 ||
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+9,10c4,5
+< #8 CONST_STRING "string with \\n \\t \\"
+< #10 CONST_STRING "illegel sring\\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "\\W\\W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+2,3c2,3
+< #1 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+< #3 CONST_STRING "\nEOF\n"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+10,14c6
+< #2 ERROR "Void"
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "Struct"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910119陈婷如_47682_1816430_518021910119_陈婷如 --------
+using comment-error.seal --------
+2c2
+< #1 ERROR "null character in string"
+---
+> #1 ERROR "String contains null character '\\0'"
+4,5c4,5
+< #6 ERROR "unproper string"
+< #6 ERROR "exists EOF in comment"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,5c2,3
+< #1 CONST_INT 890H�
+< #2 ERROR "\177"
+< #2 ERROR "\000"
+< #2 CONST_INT 230
+---
+> #1 ERROR "illegal Identifier name 0xga"
+> #2 CONST_INT 23230
+passed
+using integers.seal --------
+5,34c5,17
+< #7 CONST_INT 171n�
+< #8 ERROR "\177"
+< #8 ERROR "\000"
+< #8 OBJECTID cd
+< #9 CONST_INT 239n�
+< #10 ERROR "\177"
+< #10 ERROR "\000"
+< #10 CONST_INT 55
+< #11 CONST_INT 1295�
+< #12 ERROR "\000"
+< #12 CONST_INT 174n�
+< #13 ERROR "\177"
+< #13 ERROR "\000"
+< #13 ERROR "A"
+< #13 ERROR "B"
+< #13 ERROR "C"
+< #13 ERROR "D"
+< #13 ERROR "E"
+< #13 ERROR "F"
+< #14 CONST_INT 2561�
+< #15 ERROR "\000"
+< #15 OBJECTID x12
+< #16 CONST_INT 52n�
+< #17 ERROR "\177"
+< #17 ERROR "\000"
+< #17 CONST_INT 56
+< #18 CONST_INT 120n�
+< #19 ERROR "\177"
+< #19 ERROR "\000"
+< #19 CONST_INT 90
+---
+> #7 CONST_INT 171
+> #8 CONST_INT 205
+> #9 CONST_INT 239
+> #10 CONST_INT 85
+> #11 CONST_INT 1295
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2,6c2,3
+< #6 CONST_STRING "this a simple string\nfor \n\nmulti line\n@@ `\n\n"
+< #7 ERROR "E"
+< #7 ERROR "O"
+< #7 ERROR "F"
+< #8 ERROR "exists EOF in comment"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910122童颖睿_52491_1831314_518021910122_童颖睿-1 --------
+using comment-error.seal --------
+4c4,5
+< #6 ERROR "String starts a new line with false form."
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+4,5c4,5
+< #9 CONST_STRING "string with \n \t \\"
+< #11 CONST_STRING "illegel sring\\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "\\W\\W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+3,4c3
+< 
+< E#8 CONST_STRING "OF\n"
+---
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910126胡博石_56959_1835244_518021910126_胡博石 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4,5
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+6,15c6,10
+< #5 CONST_FLOAT 23.5
+< #5 CONST_INT 59
+< #6 CONST_FLOAT 25.6
+< #6 CONST_INT 4
+< #7 CONST_FLOAT 11.2
+< #7 CONST_INT 33
+< #8 CONST_FLOAT 54.9
+< #8 CONST_INT 8745
+< #9 CONST_FLOAT 12035.2
+< #9 CONST_INT 24402
+---
+> #5 CONST_FLOAT 23.559
+> #6 CONST_FLOAT 25.64
+> #7 CONST_FLOAT 11.233
+> #8 CONST_FLOAT 54.98745
+> #9 CONST_FLOAT 12035.224402
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910147范佳妮_49155_1843377_518021910147_范佳妮-1 --------
+using comment-error.seal --------
+2c2,5
+< #6 ERROR "\000"
+---
+> #1 ERROR "String contains null character '\\0'"
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+10,25c10,12
+< #13 CONST_INT 0
+< #13 OBJECTID x
+< #13 ERROR "A"
+< #13 ERROR "E"
+< #14 CONST_INT 0
+< #14 OBJECTID x
+< #14 ERROR "A"
+< #14 ERROR "B"
+< #14 ERROR "C"
+< #14 ERROR "D"
+< #14 ERROR "E"
+< #14 ERROR "F"
+< #15 CONST_INT 0
+< #15 OBJECTID x
+< #15 ERROR "A"
+< #15 CONST_INT 01
+---
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+passed
+using keywords.seal --------
+5c5
+< #4 OBJECTID else
+---
+> #4 else
+7c7
+< #6 OBJECTID for
+---
+> #6 for
+9,10c9,10
+< #8 OBJECTID continue
+< #9 OBJECTID break
+---
+> #8 continue
+> #9 break
+passed
+using operator-error.seal --------
+3c3
+< #2 '.'
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+12,15c12,13
+< #3 '&'
+< #3 '&'
+< #3 '|'
+< #3 '|'
+---
+> #3 &&
+> #3 ||
+20c18
+< #4 ERROR "~"
+---
+> #4 '~'
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+2c2,5
+< #10 ERROR "\000"
+---
+> #3 CONST_STRING "sample string"
+> #6 CONST_STRING "multi line \nstring"
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 ERROR "\000"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+2,19c2,3
+< #1 ERROR "`"
+< #1 OBJECTID this
+< #1 OBJECTID a
+< #1 OBJECTID simple
+< #1 OBJECTID string
+< #2 OBJECTID for
+< #2 ERROR "\\"
+< #2 OBJECTID n
+< #3 OBJECTID multi
+< #3 OBJECTID line
+< #4 ERROR "@"
+< #4 ERROR "@"
+< #4 ERROR "\\"
+< #6 CONST_STRING "\n\n"
+< #7 ERROR "E"
+< #7 ERROR "O"
+< #7 ERROR "F"
+< #8 ERROR "`"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,6c2,6
+< #2 TYPERD Int
+< #2 TYPERD Float
+< #2 TYPERD String
+< #2 TYPERD Bool
+< #2 TYPERD Void
+---
+> #2 TYPEID Int
+> #2 TYPEID Float
+> #2 TYPEID String
+> #2 TYPEID Bool
+> #2 TYPEID Void
+9,11c9
+< #5 OBJECTID a
+< #5 ERROR "_"
+< #5 ERROR "_"
+---
+> #5 OBJECTID a__
+13,20c11,12
+< #7 OBJECTID kam
+< #7 ERROR "_"
+< #7 ERROR "_"
+< #7 CONST_INT 32
+< #8 OBJECTID int
+< #8 ERROR "_"
+< #8 ERROR "_"
+< #8 CONST_INT 32
+---
+> #7 OBJECTID kam__32
+> #8 OBJECTID int__32
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910148何新蕾_55858_1842491_518021910148_何新蕾 --------
+using comment-error.seal --------
+3,6c3,5
+< #1 CONST_STRING "\n\n"
+< #1 ERROR "\\"
+< #1 CONST_STRING ""
+< #3 CONST_STRING "aaa\n"
+---
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+9,10c9,10
+< #8 OBJECTID continue
+< #9 OBJECTID break
+---
+> #8 continue
+> #9 break
+passed
+using operator-error.seal --------
+4,5c4,5
+< #3 '['
+< #4 ']'
+---
+> #3 ERROR "["
+> #4 ERROR "]"
+passed
+using operators.seal --------
+9,16c9,14
+< #3 '<='
+< #3 '>='
+< #3 '=='
+< #3 ERROR "&"
+< #3 ERROR "&"
+< #3 ERROR "|"
+< #3 ERROR "|"
+< #3 ERROR "^"
+---
+> #3 <=
+> #3 >=
+> #3 ==
+> #3 &&
+> #3 ||
+> #3 '^'
+18,21c16,19
+< #4 ERROR "&"
+< #4 ERROR "|"
+< #4 ERROR "~"
+< #4 ERROR "!"
+---
+> #4 '&'
+> #4 '|'
+> #4 '~'
+> #4 '!'
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2c2
+< #5 OBJECTID __aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910150苏婉芳_56573_1839054_518021910150_苏婉芳 --------
+using comment-error.seal --------
+2c2
+< #1 ERROR "String contain null character '\\0'"
+---
+> #1 ERROR "String contains null character '\\0'"
+5c5
+< #6 ERROR "EOF in srting"
+---
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910153昌洵成_54287_1843336_518021910153-昌洵成 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4,5
+< #6 ERROR "\\ is needed in the next line for string"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910193史和权_49323_1830328_518021910193_史和权-2 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "without expected backslash before a new line in string."
+< #6 ERROR "unexpected EOF in string."
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2c2
+< #1 ERROR "0xga"
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2,4c2,3
+< #6 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ `\n\n"
+< #7 ERROR "EOF"
+< #8 ERROR "unexpected EOF in string."
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2c2
+< #5 ERROR "__aac"
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "Struct"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910208盛煜容_46984_1841655_518021910208_盛煜容 --------
+using comment-error.seal --------
+3,4c3,5
+< #2 CONST_STRING "\""
+< #4 CONST_STRING "aaa\n"
+---
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+2c2
+< *#12 var
+---
+> #12 var
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+12,15c12,13
+< #3 '&'
+< #3 '&'
+< #3 '|'
+< #3 '|'
+---
+> #3 &&
+> #3 ||
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+4,5c4,5
+< #9 CONST_STRING "string with \n \t \\"
+< #12 CONST_STRING "illegel sring\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 <Invalid Token>
+< #5 <Invalid Token>
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "should BEGIN with a lowercase litter"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910301贺皓涵_44138_1841860_518021910301_贺皓涵 --------
+using comment-error.seal --------
+2,6c2,5
+< #1 ERROR "\\"
+< #1 CONST_INT 0
+< #3 ERROR "\\"
+< #5 ERROR "String contains a new line without '\\'"
+< #5 OBJECTID aaa
+---
+> #1 ERROR "String contains null character '\\0'"
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+19,24c10,12
+< #13 CONST_INT 0
+< #13 OBJECTID xAE
+< #14 CONST_INT 0
+< #14 OBJECTID xABCDEF
+< #15 CONST_INT 0
+< #15 OBJECTID xA01
+---
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+18c14
+< #3 ERROR "^"
+---
+> #3 '^'
+20c16
+< #4 ERROR "&"
+---
+> #4 '&'
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,26c2,5
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+< #3 OBJECTID sample
+< #3 OBJECTID string
+< #5 OBJECTID multi
+< #5 OBJECTID line
+< #5 ERROR "\\"
+< #6 OBJECTID string
+< #8 OBJECTID string
+< #8 OBJECTID with
+< #8 ERROR "\\"
+< #8 OBJECTID n
+< #8 ERROR "\\"
+< #8 OBJECTID t
+< #8 ERROR "\\"
+< #8 ERROR "\\"
+< #10 OBJECTID illegel
+< #10 OBJECTID sring
+< #10 ERROR "\\"
+< #10 ERROR "\\"
+< #10 ERROR "\\"
+< #10 OBJECTID n
+---
+> #3 CONST_STRING "sample string"
+> #6 CONST_STRING "multi line \nstring"
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2,6c2
+< #1 ERROR "\\"
+< #1 ERROR "W"
+< #1 ERROR "\\"
+< #1 ERROR "W"
+< #1 ERROR "\\"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+2c2
+< #4 CONST_STRING "this a simple string\nfor n\nmulti line\n@@ \\"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+10,15c6
+< #2 ERROR "V"
+< #2 OBJECTID oid
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910331林绍钦_47287_1836537_518021910331-林绍钦 --------
+using comment-error.seal --------
+3,4c3,5
+< #3 CONST_STRING "\\0"
+< #6 ERROR "String contains empty line"
+---
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910336王绍源_55948_1834926_518021910336_王绍源 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4,5
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+6,15c6,10
+< #5 CONST_FLOAT 23.5
+< #5 CONST_INT 59
+< #6 CONST_FLOAT 25.6
+< #6 CONST_INT 4
+< #7 CONST_FLOAT 11.2
+< #7 CONST_INT 33
+< #8 CONST_FLOAT 54.9
+< #8 CONST_INT 8745
+< #9 CONST_FLOAT 12035.2
+< #9 CONST_INT 24402
+---
+> #5 CONST_FLOAT 23.559
+> #6 CONST_FLOAT 25.64
+> #7 CONST_FLOAT 11.233
+> #8 CONST_FLOAT 54.98745
+> #9 CONST_FLOAT 12035.224402
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910478闫超博_44661_1835236_518021910478_闫超博-1 --------
+using comment-error.seal --------
+5c5
+< #6 ERROR "Unexpected EOF in string."
+---
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910487王玮_45497_1830287_51802191048_王玮 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2c2
+< #1 CONST_INT 890
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 CONST_FLOAT .
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2,6c2,3
+< #6 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ `\n\n"
+< #7 ERROR "E"
+< #7 ERROR "O"
+< #7 ERROR "F"
+< #8 ERROR "EOF in string constant"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+10,15c6
+< #2 ERROR "V"
+< #2 OBJECTID oid
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910503夏里宾_56866_1831332_518021910503_夏里宾-1 --------
+using comment-error.seal --------
+2c2
+< #1 ERROR "String Contains \\0"
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4,5
+< #6 ERROR "String Contains \n"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910534尹俊同_49117_1839590_518021910534_尹俊同 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "Newline in quotation must use a ' \\ '."
+< #6 ERROR "EOF in string constant."
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910556王若辰_46201_1841957_518021910556王若辰 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+7c7
+< #6 OBJECTID for
+---
+> #6 for
+9,10c9,10
+< #8 OBJECTID continue
+< #9 OBJECTID break
+---
+> #8 continue
+> #9 break
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+16,19c12,13
+< #3 '&'
+< #3 '&'
+< #3 '|'
+< #3 '|'
+---
+> #3 &&
+> #3 ||
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 OBJECTID for
+< #1 OBJECTID quoted
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+10,14c6
+< #2 ERROR "illegal TYPEID Void"
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910577黄弘骏_47578_1845595_518021910577_黄弘骏 --------
+using comment-error.seal --------
+4d3
+< #5 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+5,7c5
+< #4 CONST_INT 0
+< #4 ERROR "."
+< #4 CONST_INT 0
+---
+> #4 CONST_FLOAT 0.0
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910596陈欣然_52365_1817296_518021910596_陈欣然 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "we must input '\\n',not'\n'"
+< #6 ERROR "meet end but the string's not closed yet"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 ERROR "!"
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 ERROR "\360S\0306\370U"
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+18c14
+< #3 ERROR "^"
+---
+> #3 '^'
+20c16
+< #4 ERROR "&"
+---
+> #4 '&'
+22,23c18,19
+< #4 ERROR "~"
+< #4 ERROR "!"
+---
+> #4 '~'
+> #4 '!'
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+9,10c4,5
+< #8 CONST_STRING "string with n \t \\"
+< #10 CONST_STRING "illegel sring\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2,4c2,3
+< #6 CONST_STRING "this a simple string\nfor n\nmulti line\n@@ `\n\n"
+< #7 ERROR "illegal TYPEID EOF"
+< #8 ERROR "meet end but the string's not closed yet"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2c2
+< #5 OBJECTID __aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910597李欣然_49973_1844223_518021910597_李欣然 --------
+using comment-error.seal --------
+4c4
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+8c8
+< #10 CONST_FLOAT 0x55
+---
+> #10 CONST_INT 85
+13,17c13,17
+< #16 CONST_FLOAT 0x12
+< #17 CONST_FLOAT 0x34
+< #18 CONST_FLOAT 0x56
+< #19 CONST_FLOAT 0x78
+< #20 CONST_FLOAT 0x90
+---
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "illegal TYPEID X"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910600吴管浩_45832_1836475_518021910600_吴管浩 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910618叶鸿宇_49302_1839108_518021910618_叶鸿宇-1 --------
+using comment-error.seal --------
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2c2
+< #1 CONST_INT 266
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+19,24c10,12
+< #13 CONST_INT 0
+< #13 ERROR "AE"
+< #14 CONST_INT 0
+< #14 ERROR "ABCDEF"
+< #15 CONST_INT 0
+< #15 ERROR "A01"
+---
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2,4c2,3
+< #6 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\`\n"
+< #7 ERROR "EOF"
+< #8 ERROR "EOF in string constant"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "Struct"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910625刘雪超_50580_1841009_518021910625_刘雪超 --------
+using comment-error.seal --------
+2,6c2,5
+< #1 CONST_STRING "\\0"
+< #3 CONST_STRING "\\"
+< #4 ERROR "changeline error"
+< #4 OBJECTID aaa
+< #5 ERROR "\""
+---
+> #1 ERROR "String contains null character '\\0'"
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+2,66d1
+< #2 ERROR "."
+< #3 ERROR "\350"
+< #3 ERROR "\277"
+< #3 ERROR "\231"
+< #3 ERROR "\346"
+< #3 ERROR "\230"
+< #3 ERROR "\257"
+< #3 ERROR "\344"
+< #3 ERROR "\270"
+< #3 ERROR "\252"
+< #3 ERROR "\346"
+< #3 ERROR "\263"
+< #3 ERROR "\250"
+< #3 ERROR "\351"
+< #3 ERROR "\207"
+< #3 ERROR "\212"
+< #4 ERROR "\346"
+< #4 ERROR "\263"
+< #4 ERROR "\250"
+< #4 ERROR "\351"
+< #4 ERROR "\207"
+< #4 ERROR "\212"
+< #4 ERROR "\351"
+< #4 ERROR "\207"
+< #4 ERROR "\214"
+< #4 ERROR "\344"
+< #4 ERROR "\273"
+< #4 ERROR "\200"
+< #4 ERROR "\344"
+< #4 ERROR "\271"
+< #4 ERROR "\210"
+< #4 ERROR "\351"
+< #4 ERROR "\203"
+< #4 ERROR "\275"
+< #4 ERROR "\346"
+< #4 ERROR "\227"
+< #4 ERROR "\240"
+< #4 ERROR "\346"
+< #4 ERROR "\211"
+< #4 ERROR "\200"
+< #4 ERROR "\350"
+< #4 ERROR "\260"
+< #4 ERROR "\223"
+< #5 '*'
+< #5 '&'
+< #5 CONST_INT 123
+< #5 CONST_INT 86
+< #6 CONST_INT 68
+< #7 TYPEID Int
+< #8 TYPEID String
+< #9 ERROR "\350"
+< #9 ERROR "\277"
+< #9 ERROR "\231"
+< #9 ERROR "\351"
+< #9 ERROR "\203"
+< #9 ERROR "\275"
+< #9 ERROR "\346"
+< #9 ERROR "\230"
+< #9 ERROR "\257"
+< #9 ERROR "\346"
+< #9 ERROR "\263"
+< #9 ERROR "\250"
+< #9 ERROR "\351"
+< #9 ERROR "\207"
+< #9 ERROR "\212"
+68,74d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+76,83d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2c2
+< #1 OBJECTID 0xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+5c5
+< #4 OBJECTID else
+---
+> #4 else
+7c7
+< #6 OBJECTID for
+---
+> #6 for
+9,10c9,10
+< #8 OBJECTID continue
+< #9 OBJECTID break
+---
+> #8 continue
+> #9 break
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 OBJECTID for
+< #1 OBJECTID quoted
+9,10c4,5
+< #8 CONST_STRING "string with \\n \\t \\"
+< #10 CONST_STRING "illegel sring\\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "\\W\\W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+10,14c6
+< #2 ERROR "illegal upper"
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+---
+> #2 TYPEID Void
+17,19c9
+< #5 OBJECTID a
+< #5 ERROR "_"
+< #5 ERROR "_"
+---
+> #5 OBJECTID a__
+21,28c11,12
+< #7 OBJECTID kam
+< #7 ERROR "_"
+< #7 ERROR "_"
+< #7 CONST_INT 32
+< #8 OBJECTID int
+< #8 ERROR "_"
+< #8 ERROR "_"
+< #8 CONST_INT 32
+---
+> #7 OBJECTID kam__32
+> #8 OBJECTID int__32
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "illegal upper"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910628吴小茜_54227_1830132_518021910628_吴小茜 --------
+using comment-error.seal --------
+3c3
+< #3 CONST_STRING "\\\""
+---
+> #3 CONST_STRING "\""
+5c5
+< #6 ERROR "EOF in string."
+---
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+14c14
+< #3 ERROR "^"
+---
+> #3 '^'
+16c16
+< #4 ERROR "&"
+---
+> #4 '&'
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+4,5c4,5
+< #8 CONST_STRING "string with \\n \t \\"
+< #10 CONST_STRING "illegel sring\\\\n"
+---
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "\\W\\W \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+2,4c2,3
+< #6 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\`\n\n"
+< #7 ERROR "illegal TYPEID EOF"
+< #8 ERROR "EOF in string."
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910643王子伦_45398_1832145_518021910643_王子伦 --------
+using comment-error.seal --------
+3d2
+< #2 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+19c19
+< #4 ERROR "!"
+---
+> #4 '!'
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+6,7c6
+< #2 ERROR "V"
+< #2 OBJECTID oid
+---
+> #2 TYPEID Void
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910663陆千禧_50078_1819143_518021910663_陆千禧 --------
+using comment-error.seal --------
+2c2
+< #1 ERROR "Unterminated string constant"
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910664陆正昊_49867_1786549_518021910664_陆正昊 --------
+using comment-error.seal --------
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910668徐扬_44800_1778767_518021910668_徐扬-2 --------
+using comment-error.seal --------
+2c2
+< #1 ERROR "Error: String Contains Null Character!"
+---
+> #1 ERROR "String contains null character '\\0'"
+4,5c4,5
+< #6 ERROR "Error: String Contains \n Character!"
+< #6 ERROR "Error: EOF in string constant!"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID ga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+19c19
+< #4 ERROR "!"
+---
+> #4 '!'
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "Unmatched TYPEID"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910690刘子涵_49870_1786825_518021910690_刘子涵 --------
+using comment-error.seal --------
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+11c11
+< #14 CONST_INT 11259375�w<�I
+---
+> #14 CONST_INT 11259375
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2c2,3
+< #8 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\`\n\n`\nEOF\n"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910740池彦廷_54747_1843107_518021910740_池彦廷 --------
+using comment-error.seal --------
+2,5c2,5
+< #1 ERROR "string contains null character"
+< #3 ERROR "string contains null character"
+< #6 ERROR "unterminated string constant"
+< #6 ERROR "EOF in String"
+---
+> #1 ERROR "String contains null character '\\0'"
+> #3 CONST_STRING "\""
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 ERROR "!"
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+17,18c8,9
+< #10 CONST_INT 901
+< #11 CONST_INT 14351
+---
+> #10 CONST_INT 85
+> #11 CONST_INT 1295
+21,26c12,17
+< #15 CONST_INT 3377
+< #16 CONST_INT 834
+< #17 CONST_INT 868
+< #18 CONST_INT 902
+< #19 CONST_INT 936
+< #20 CONST_INT 960
+---
+> #15 CONST_INT 2561
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+13,14c9
+< #3 '<'
+< #3 '='
+---
+> #3 <=
+24c19
+< #4 ERROR "!"
+---
+> #4 '!'
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING " \n"
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "variable begins with uppercase letter"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910749汤历欧_51222_1840362_518021910749_汤历欧-4 --------
+using comment-error.seal --------
+4c4,5
+< #6 CONST_STRING "aaa"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 ERROR "\320\303\245t\330U"
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID ga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+8c3
+< #6 CONST_STRING "multi line string"
+---
+> #6 CONST_STRING "multi line \nstring"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "WW "
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2c2
+< #8 struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910755张涵_47795_1845141_518021910755 --------
+using comment-error.seal --------
+4c4,5
+< #6 CONST_STRING "aaa"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 '/'
+< #14 '/'
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 '/'
+< #18 '/'
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 ERROR "\320#.\016\272U"
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 '/'
+< #10 '/'
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID ga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID integers
+< #2 '/'
+< #2 '/'
+< #2 OBJECTID decimals
+11,13d4
+< #6 '/'
+< #6 '/'
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+8c3
+< #6 CONST_STRING "multi line string"
+---
+> #6 CONST_STRING "multi line \nstring"
+passed
+using strings-quote2.seal --------
+2c2
+< #2 CONST_STRING "WW "
+---
+> #2 CONST_STRING "WW \n"
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 '/'
+< #1 '/'
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 '/'
+< #4 '/'
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2c2
+< #8 struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910761崔湘晗_44322_1841706_518021910761_崔湘晗-1 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "STRING UNTERMINATED"
+< #6 ERROR "EOF IN STRING"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+5,7c5
+< #4 CONST_INT 0
+< #4 ERROR "."
+< #4 CONST_INT 0
+---
+> #4 CONST_FLOAT 0.0
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+4c4
+< #8 CONST_STRING "string with \n \t \\g"
+---
+> #8 CONST_STRING "string with \n \t \\"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910764徐菡潞_48365_1824165_518021910764徐菡潞 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4,5c4,5
+< #6 ERROR "Switch line without a backslash"
+< #6 ERROR "EOF in string"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910771黎锦灏_50382_1841097_518021910771_黎锦灏-3 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "String ERROR:'\n',must use a '\\'"
+< #6 ERROR "String ERROR EOF"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2c2
+< #1 ERROR "must start with Lower-case letters"
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2c2
+< #1 CONST_INT 123
+---
+> #3 CONST_INT 123
+5,7c5,7
+< #6 CONST_INT 186
+< #8 CONST_INT 220
+< #9 CONST_INT 254
+---
+> #7 CONST_INT 171
+> #8 CONST_INT 205
+> #9 CONST_INT 239
+9,17c9,17
+< #11 CONST_INT 3845
+< #13 CONST_INT 234
+< #14 CONST_INT 16702650
+< #15 CONST_INT 266
+< #16 CONST_INT 33
+< #17 CONST_INT 67
+< #18 CONST_INT 101
+< #19 CONST_INT 135
+< #20 CONST_INT 9
+---
+> #11 CONST_INT 1295
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 CONST_FLOAT .
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+2,6c2,6
+< #1 '+'
+< #1 '-'
+< #1 '*'
+< #1 '/'
+< #1 '%'
+---
+> #2 '+'
+> #2 '-'
+> #2 '*'
+> #2 '/'
+> #2 '%'
+16c16
+< #4 ERROR "&"
+---
+> #4 '&'
+19c19
+< #4 ERROR "!"
+---
+> #4 '!'
+passed
+using othersymbols.seal --------
+2,7c2,7
+< #1 ';'
+< #1 ','
+< #1 '{'
+< #1 '}'
+< #1 '('
+< #1 ')'
+---
+> #2 ';'
+> #2 ','
+> #2 '{'
+> #2 '}'
+> #2 '('
+> #2 ')'
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+2,3c2
+< #2 for
+< #4 CONST_STRING "\\n\nmulti line\n@@ \\"
+---
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+passed
+using symbol-error.seal --------
+2c2
+< #5 ERROR "must start with Lower-case letters"
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,9c2,9
+< #1 ERROR "must start with Lower-case letters"
+< #1 ERROR "must start with Lower-case letters"
+< #1 ERROR "must start with Lower-case letters"
+< #1 ERROR "must start with Lower-case letters"
+< #1 ERROR "must start with Lower-case letters"
+< #4 OBJECTID a
+< #4 OBJECTID b
+< #4 OBJECTID a__
+---
+> #2 TYPEID Int
+> #2 TYPEID Float
+> #2 TYPEID String
+> #2 TYPEID Bool
+> #2 TYPEID Void
+> #5 OBJECTID a
+> #5 OBJECTID b
+> #5 OBJECTID a__
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "must start with Lower-case letters"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910798李皓宇_51300_1834935_518021910798_李皓宇 --------
+using comment-error.seal --------
+4a5
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "illegal Identifier name Struct"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910799李思源_49207_1829687_518021910799_李思源 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4,5c4,5
+< #5 ERROR "String with double quotation cannot start a new line directly"
+< #5 ERROR "EOF in string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+2a3
+> #16 var
+passed
+using floats.seal --------
+10a11
+> #12 CONST_FLOAT 4.0
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+1a2,17
+> #3 CONST_INT 123
+> #4 CONST_INT 332
+> #5 CONST_INT 0
+> #7 CONST_INT 171
+> #8 CONST_INT 205
+> #9 CONST_INT 239
+> #10 CONST_INT 85
+> #11 CONST_INT 1295
+> #13 CONST_INT 174
+> #14 CONST_INT 11259375
+> #15 CONST_INT 2561
+> #16 CONST_INT 18
+> #17 CONST_INT 52
+> #18 CONST_INT 86
+> #19 CONST_INT 120
+> #20 CONST_INT 144
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 CONST_FLOAT .
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+1a2,19
+> #2 '+'
+> #2 '-'
+> #2 '*'
+> #2 '/'
+> #2 '%'
+> #3 '<'
+> #3 '>'
+> #3 <=
+> #3 >=
+> #3 ==
+> #3 &&
+> #3 ||
+> #3 '^'
+> #4 '='
+> #4 '&'
+> #4 '|'
+> #4 '~'
+> #4 '!'
+passed
+using othersymbols.seal --------
+1a2,7
+> #2 ';'
+> #2 ','
+> #2 '{'
+> #2 '}'
+> #2 '('
+> #2 ')'
+passed
+using strings-quote1.seal --------
+1a2,5
+> #3 CONST_STRING "sample string"
+> #6 CONST_STRING "multi line \nstring"
+> #8 CONST_STRING "string with \n \t \\"
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+1a2,12
+> #2 TYPEID Int
+> #2 TYPEID Float
+> #2 TYPEID String
+> #2 TYPEID Bool
+> #2 TYPEID Void
+> #5 OBJECTID a
+> #5 OBJECTID b
+> #5 OBJECTID a__
+> #6 OBJECTID a33
+> #7 OBJECTID kam__32
+> #8 OBJECTID int__32
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910848于子晗_43863_1837745_518021910848_于子晗 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "Unterminated string constant"
+< #6 ERROR "EOF IN COMMENT"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+5,7c5
+< #4 CONST_INT 0
+< #4 ERROR "."
+< #4 CONST_INT 0
+---
+> #4 CONST_FLOAT 0.0
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+4,5c4
+< #8 ERROR "\"string with \\n \\"
+< #8 CONST_STRING " \\"
+---
+> #8 CONST_STRING "string with \n \t \\"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910851白皓名_56413_1831130_518021910851_白皓名 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+6,15c6,10
+< #5 CONST_FLOAT 23.5
+< #5 CONST_INT 59
+< #6 CONST_FLOAT 25.6
+< #6 CONST_INT 4
+< #7 CONST_FLOAT 11.2
+< #7 CONST_INT 33
+< #8 CONST_FLOAT 54.9
+< #8 CONST_INT 8745
+< #9 CONST_FLOAT 12035.2
+< #9 CONST_INT 24402
+---
+> #5 CONST_FLOAT 23.559
+> #6 CONST_FLOAT 25.64
+> #7 CONST_FLOAT 11.233
+> #8 CONST_FLOAT 54.98745
+> #9 CONST_FLOAT 12035.224402
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910866许阳帆_46523_1830569_518021910866_许阳帆 --------
+using comment-error.seal --------
+4,5c4,5
+< #6 ERROR "Unterminated string constant"
+< #6 ERROR "EOF in string\" constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+2c2
+< *#12 var
+---
+> #12 var
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+5c5
+< #2 ERROR "/"
+---
+> #2 '/'
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+1a2,3
+> #4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+> #8 CONST_STRING "\nEOF\n"
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910879陈瀚嵩_55546_1816141_518021910879-陈瀚嵩-3 --------
+using comment-error.seal --------
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910889刘承轩_47567_1842070_518021910889_刘承轩-1 --------
+using comment-error.seal --------
+4c4,5
+< #6 ERROR "New Line Not Escaped!"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+3,9d2
+< #14 ERROR "/"
+< #14 ERROR "/"
+< #14 OBJECTID this
+< #14 OBJECTID an
+< #14 OBJECTID line
+< #14 OBJECTID comment
+< #14 '!'
+11,18d3
+< #18 ERROR "/"
+< #18 ERROR "/"
+< #18 OBJECTID there
+< #18 OBJECTID will
+< #18 OBJECTID be
+< #18 OBJECTID a
+< #18 OBJECTID error
+< #18 OBJECTID below
+passed
+using floats.seal --------
+11,14d10
+< #10 ERROR "/"
+< #10 ERROR "/"
+< #10 OBJECTID some
+< #10 OBJECTID floats
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+2,7d1
+< #1 ERROR "/"
+< #1 ERROR "/"
+< #1 OBJECTID integers
+< #2 ERROR "/"
+< #2 ERROR "/"
+< #2 OBJECTID decimals
+11,13d4
+< #6 ERROR "/"
+< #6 ERROR "/"
+< #6 OBJECTID hexs
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+2,5d1
+< #1 ERROR "/"
+< #1 ERROR "/"
+< #1 OBJECTID legel
+< #1 OBJECTID operators
+9c5
+< #2 ERROR "/"
+---
+> #2 '/'
+passed
+using othersymbols.seal --------
+2,5d1
+< #1 ERROR "/"
+< #1 ERROR "/"
+< #1 OBJECTID other
+< #1 OBJECTID symbols
+passed
+using strings-quote1.seal --------
+2,6d1
+< #1 ERROR "/"
+< #1 ERROR "/"
+< #1 OBJECTID string
+< #1 for
+< #1 OBJECTID quoted
+10,16c5
+< #8 OBJECTID illegel
+< #8 OBJECTID sring
+< #8 <Invalid Token>
+< #8 <Invalid Token>
+< #8 <Invalid Token>
+< #8 OBJECTID n
+< #8 ERROR "Open quotation mark until EOF!"
+---
+> #10 CONST_STRING "illegel sring\\\n"
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+2,5d1
+< #1 ERROR "/"
+< #1 ERROR "/"
+< #1 OBJECTID type
+< #1 OBJECTID name
+11,14d6
+< #4 ERROR "/"
+< #4 ERROR "/"
+< #4 OBJECTID legel
+< #4 OBJECTID name
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910890鲁昱_56885_1842077_518021910890_鲁昱 --------
+using comment-error.seal --------
+4c4,5
+< #6 ERROR "String contains null character '\n'"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+> #6 ERROR "EOF in string constant"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2,3c2
+< #8 ERROR "S"
+< #8 OBJECTID truct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910932王妍_46126_1836866_518021910932-王妍 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+3c3
+< #2 <Invalid Token>
+---
+> #2 ERROR "."
+passed
+using operators.seal --------
+14c14
+< #3 ERROR "^"
+---
+> #3 '^'
+16c16
+< #4 ERROR "&"
+---
+> #4 '&'
+19c19
+< #4 ERROR "!"
+---
+> #4 '!'
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2,4c2
+< #5 ERROR "_"
+< #5 ERROR "_"
+< #5 OBJECTID aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 struct
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910938方岭永_54083_1837602_518021910938_方岭永 --------
+using comment-error.seal --------
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2c2
+< #5 ERROR "illegal TYPEID __aac"
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+passed
+--------Test ../518021910943罗智超_56809_1825430_518021910943_罗智超 --------
+using comment-error.seal --------
+2c2
+< #1 CONST_STRING ""
+---
+> #1 ERROR "String contains null character '\\0'"
+4c4
+< #6 ERROR "Unterminated string constant"
+---
+> #6 ERROR "newline in quotation must use a '\\'"
+passed
+using comment.seal --------
+passed
+using floats.seal --------
+passed
+using integers-error.seal --------
+2,3c2
+< #1 CONST_INT 0
+< #1 OBJECTID xga
+---
+> #1 ERROR "illegal Identifier name 0xga"
+passed
+using integers.seal --------
+passed
+using keywords.seal --------
+passed
+using operator-error.seal --------
+passed
+using operators.seal --------
+passed
+using othersymbols.seal --------
+passed
+using strings-quote1.seal --------
+passed
+using strings-quote2.seal --------
+passed
+using strings-reverse.seal --------
+passed
+using symbol-error.seal --------
+2c2
+< #5 OBJECTID __aac
+---
+> #5 ERROR "illegal Identifier name __aac"
+passed
+using symbols.seal --------
+passed
+using type-error.seal --------
+2c2
+< #8 ERROR "Struct"
+---
+> #8 ERROR "illegal TYPEID Struct"
+passed
+--------Test ../518021910961张津萓_51694_1840081_518021910961_张津萓 --------
+using comment-error.seal --------

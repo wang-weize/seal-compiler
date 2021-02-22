@@ -1,0 +1,3 @@
+#name "strings-reverse.seal"
+#4 CONST_STRING "this a simple string\nfor \\n\nmulti line\n@@ \\"
+#8 CONST_STRING "\nEOF\n"
