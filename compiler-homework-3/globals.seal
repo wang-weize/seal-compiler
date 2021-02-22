@@ -1,0 +1,15 @@
+var x Int;
+
+func main() Void {
+    printf("%lld, %lld", x, test());
+    if y {
+        return;
+    }
+    return ;
+}
+
+func test() Int {
+    return 1 + 5;
+}
+
+var y Bool;

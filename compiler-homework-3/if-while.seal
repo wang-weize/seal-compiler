@@ -1,0 +1,15 @@
+func main() Void {
+    var s Int;
+    var i Int;
+    i = 0;
+    s = 0;
+    if true {
+        printf("yes!");
+        return;
+    }
+    while i < 100 {
+        s = s + i;
+    }
+    printf("sum = %lld\n", s);
+    return;
+}

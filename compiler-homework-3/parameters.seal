@@ -1,0 +1,14 @@
+func test1(x Int, y Float, z Bool) Int {
+    return 1;
+}
+
+func main() Void {
+    var x Int;
+    var y Float;
+    var z Bool;
+    test1(x,y,z);
+    test1(z,y,x);
+    test1(x);
+    return;
+}
+

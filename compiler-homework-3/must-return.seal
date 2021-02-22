@@ -1,0 +1,14 @@
+func main() Void {
+    if true {
+        ;;;;
+        return;
+    }
+    while true {
+        ;;;;;
+        return;
+    }
+    for ;; {
+        ;;;;;
+        return;
+    }
+}

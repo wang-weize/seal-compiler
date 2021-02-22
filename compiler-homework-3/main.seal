@@ -1,0 +1,4 @@
+func main1() Void {
+    printf("hhaa");
+    return;
+}

@@ -1,0 +1,17 @@
+var x Int;
+
+func main() Void {
+    var y Float;
+    x = 2;
+    y = 3.0;
+    if true {
+        var x Bool;
+        x = true;
+    }
+    if true {
+        var x Float;
+        x ^ x;  // error
+    }
+    y = x + y;
+    return;
+}
